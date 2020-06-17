@@ -20,11 +20,11 @@ end
 # 0 なので break
 
 ans = (1..n)
-      .map { |i| [i, digit_sum(i)] }
-      # ここで配列の中に配列を作成し、[元の数,その数の和]を作っている。
-      .select { |d| a <= d[1] && d[1] <= b }
-      #その数の桁の和 d[1]を評価している。
-      .inject(0) { |result, d| result + d[0] }
-      #間違えがちだが、畳み込み演算で、戻り値はresultに代入され、次の処理に入る。
-      #初回のresultにはinjectの引数(0)が入る。
+  .map { |i| [i, digit_sum(i)] }
+  # ここで配列の中に配列を作成し、[元の数,その数の和]を作っている。
+  .select { |d| a <= d[1] && d[1] <= b }
+  #その数の桁の和 d[1]を評価している。
+  .inject(0) { |result, d| result + d[0] }
+  #間違えがちだが、畳み込み演算で、戻り値はresultに代入され、次の処理に入る。
+  #初回のresultにはinjectの引数(0)が入る。
 puts ans
