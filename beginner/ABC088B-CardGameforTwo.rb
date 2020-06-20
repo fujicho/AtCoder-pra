@@ -12,3 +12,22 @@ bob = array.select.with_index{ |_, i| i.odd?}.inject(&:+)
 #with_indexを使い、indexの偶奇で選別している。
 #https://docs.ruby-lang.org/ja/latest/method/Enumerator/i/with_index.html
 puts alice - bob
+
+#他の方の解答例
+_n = gets.to_i
+as = gets.strip.split.map(&:to_i).sort.reverse
+
+alice = 0
+bob = 0
+
+
+until as.empty? do
+    alice += as.shift
+    break if as.empty?
+    bob += as.shift
+end
+# shiftメソッドは配列の要素の先頭を抜き出す。
+# この時配列の要素は抜き出されたまま。
+
+
+puts (alice - bob)
