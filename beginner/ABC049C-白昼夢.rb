@@ -21,18 +21,24 @@
 s = gets.strip.reverse!
 puts s
 words = "dream", "dreamer", "erase", "eraser"
-words.each do |word|
-  word.reverse!
-  puts word
-  s.gsub(word,"")
-end
-#一致して置換→emptyなら　yes
-#一致して置換→再度eachを回してemptyならyes
-#一致して置換→再度eachを回して一致せずに!emptyならnoとすればいける気も、、、
+words.map(&:reverse!)
+puts words
+
+# until s.empty? do
+  words.each do |word|
+    puts word
+    s.gsub!(word,"")
+  end
+# end
+puts s
+
+# 一致して置換→emptyなら　yes
+# 一致して置換→再度eachを回してemptyならyes
+# 一致して置換→再度eachを回して一致せずに!emptyならnoとすればいける気も、、、
 
 
-if s == ""
-  puts "YES"
-else
-  puts "NO"
-end
+# if s == ""
+#   puts "YES"
+# else
+#   puts "NO"
+# end
