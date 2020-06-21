@@ -30,8 +30,7 @@ data.each do |d|
     #一つでもNGだったらNoを返して終了する。
   end
   current = d
-  # is_rechableがtrueならdをcurrentに代入
-  # この行を消しても通過可能。どうして解答では記述しているのかは謎。
+  # data[n]はdata[n-1]が終わってから,その地点から向かうのでcurrent = dを行う。
 end
 
 puts 'Yes'
