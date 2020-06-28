@@ -1,3 +1,6 @@
+# 整数aが入力されます。
+# 値 a+a^2+a^3 を出力してください。
+
 # n = gets.to_i
 
 # def calc(n)
@@ -10,5 +13,6 @@
 # calc(n)
 
 #　普通にこれでよい
+
 n = gets.to_i
 puts n + n**2 + n**3
